@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Felipa|Indie+Flower|Lora:400,700');
+
+
+// Fonts
+
+$ff-felipa: 'Felipa', cursive;
+$ff-lora: 'Lora', serif;
+$ff-flower: 'Indie Flower', cursive;;
+
+// Colors
+
+$dark-grey: #333333;
+$soft-grey: #E6E7E8;
+$accent: #00CBAC;
+
+
+// Mixins
+
+@mixin mq-large ($width: 875px) {
+@media (min-width: $width) {
+@content
+}
+}
+
+@mixin mq-small ($width: 875px) {
+@media (max-width: $width) {
+@content
+}
+}
+
+@mixin title-large ($ff: $ff-flower, $fs: 3rem, $color: $dark-grey, $bg: $dark-grey) {
+font-family: $ff;
+letter-spacing: 5px;
+font-weight: bold;
+font-size: $fs;
+color: $color;
+display: inline-block;
+margin: 1em auto;
+margin-top: 0;
+
+&::after {
+ content: '';
+ height: 2px;
+width: 100%;
+display: block;
+background: $bg;      
+}
+}
+
+@mixin container ($width: 90%){
+width: $width;
+margin: 0 auto;
+}
+
+
+/*Base Styles*/
+
+* {box-sizing: border-box;}
+    
+body {
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+img {
+height: auto;
+max-width: 100%;
+}
+
+figure {
+padding: 0;
+margin: 0;
+}
+
+/*Main Styles*/
+
+.main-logo {
+@include mq-small {
+padding-bottom: 1em;
+}
+}
+
+.nav {
+height: 8.3em;
+background: $dark-grey;
+margin-bottom: 9em;
+position: relative;
+border-bottom: 1px solid rgba(#333333, 0.6);
+}
+
+.mobile {
+background: $accent;
+height: 8vh;
+position: relative;
+
+@include mq-large {
+display: none;
+}
+}
+
+.mobile-nav {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+
+& ul {
+margin: 0;
+padding: 0;
+display: flex;
+height: 100%;
+}
+
+& li {
+flex: 1 1 auto;
+list-style: none;
+display: flex;
+}
+}
+
+.mobile-link {
+text-decoration: none;
+text-transform: uppercase;
+display: flex;
+flex-basis: 100%;
+justify-content: space-around;
+align-items: center;
+color: rgba($dark-grey, .8);
+font-family: $ff-lora;
+font-size: .8rem;
+font-weight: bold;
+border: 1px solid rgba($dark-grey, .1);
+border-bottom: none;
+cursor: pointer;
+transition: background 300ms, color 300ms;
+
+&:hover {
+background: $dark-grey;
+color: $accent;
+}
+}
+
+
+.slika {
+position: relative;
+top: -9em;
+@include mq-small {
+display: none;
+}
+}
+
+
+.figures {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 0 5em;
+
+@include mq-small {
+display: none;
+}
+}
+
+
+.figure1, .figure2 {
+position: relative;
+top: -13.5em;
+transition: transform ease-out 350ms;
+}
+
+.figure1:hover {
+transform: rotate(-5deg);
+}
+
+.figure2:hover {
+transform: rotate(5deg);
+}
+
+
+.pic-text {
+position: absolute;
+top: 55%;
+left: 0;
+right: 0;
+bottom: 0;
+
+
+& a {
+text-decoration: none;
+text-transform: uppercase;
+font-family: $ff-flower;
+color: $dark-grey;
+font-weight: 700;
+font-size: 1.2rem;
+padding: 1.5em;
+}
+}
+
+.middle { 
+@include mq-large {
+display: grid;
+grid-template-columns: 3fr 1fr;
+grid-template-areas: 
+"bird sidebar";
+
+.sidebar {
+grid-area: sidebar;
+background: $accent;
+border: 2px solid rgba($dark-grey, .3);
+border-right: none;
+border-bottom: none;
+position: relative;
+}
+
+.bird-desc {
+grid-area: bird;
+padding-bottom: 3em;
+}
+}
+}
+
+.sidebar {
+@include mq-small {
+display: none;
+}
+}
+
+.sidebar-title {
+@include title-large($fs: 1.7rem, $bg: none);
+padding-top: .5em;
+margin-bottom: 0;
+}
+
+.sidebar-subtitle {
+text-align: left;
+padding: 0 1em;
+font-family: $ff-lora;
+font-size: .9rem;
+color: rgba($dark-grey, .9);
+}
+
+.sidebar-text {
+padding: 0 1em;
+font-family: $ff-lora;
+font-size: .8rem;
+text-align: left;
+color: rgba($dark-grey, .9);
+}
+
+.klukca {
+position: absolute;
+top: -4.23em;
+left: 0;
+transform: rotate(-7deg);
+z-index: 200;
+}
+
+        
+.bird-desc {   
+padding-bottom: 6em;
+margin-top: -6em;
+font-family: $ff-lora;
+line-height: 1.5;
+@include container;
+@include mq-small {
+font-size: 1rem;
+}
+
+& p{
+text-align: justify;
+}
+}
+
+.bird-title {
+@include title-large; 
+@include mq-small {
+font-size: 1.5rem; 
+margin: 0 auto;
+text-align: center;
+}    
+}
+
+
+.divider {
+height: 10vh;
+background: $dark-grey;
+position: relative;
+
+&::after {
+content: '';
+display: block;
+background: $accent;
+height: 4vh;
+width: 100%;
+}
+}
+
+.logo {
+position: absolute;
+margin-top: -1em;
+left: 5%;
+}
+
+
+.nesting {
+margin-top: 4em;
+background-image: url(../img/nesting.png);
+height: 90vh;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+@include mq-small {
+height: 50vh;  
+}
+
+& h2 {
+@include title-large($color: $accent, $bg: $accent);
+@include mq-small {
+font-size: 1.5rem;
+}
+}
+}
+
+.nesting-text {
+display: flex;
+width: 80%;
+margin: 0 auto;
+flex-wrap: wrap;
+
+
+& p {
+flex: 30%;
+padding: 3.5em 0;
+font-size: 1.5rem;
+@include mq-small {
+font-size: 1rem;
+}
+}
+}
+
+footer {
+height: auto;
+background: $accent;
+margin-top: -0.6em;
+}
+
+
+.footer-bg {
+display: grid;
+
+
+@include mq-large($width: 953px) {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+.footer-title {
+@include title-large($fs: 1.2em, $ff: $ff-lora, $bg: none, $color: black);
+margin-top: 1.5em;
+padding: 0 1em;
+
+@include mq-large {
+margin-top: 3em;
+    }
+}
+
+
+.social {
+
+& i {
+color: rgba(black, .9);
+font-size: 2rem;
+padding: 1em 2em;
+transition: transform 5s;
+
+@include mq-small {
+font-size: 1.5rem;
+padding: 1em 1em;
+}
+
+&:hover {
+transform: rotateY(360deg);
+}
+}
+
+}
+
+.about-text {
+padding: 0 1.5em;
+text-align: justify;
+font-family: $ff-lora;
+line-height: 1.4;
+}
+
+.nest {
+margin-top: 1em;
+}
