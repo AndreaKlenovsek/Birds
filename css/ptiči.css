@@ -342,7 +342,7 @@ figure {
 .bird-house {
   position: absolute;
   right: 2em;
-  bottom: 0.8em;
+  bottom: 0.95em;
   height: 800px;
 }
 @media (max-width: 1155px) {

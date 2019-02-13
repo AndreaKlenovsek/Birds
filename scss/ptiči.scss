@@ -361,7 +361,7 @@ font-size: 1.5rem;
 .bird-house {
 position: absolute;
 right: 2em;
-bottom: .8em;
+bottom: .95em;
 height: 800px;
 
 @include mq-small($width: 1155px) {
