@@ -47,6 +47,11 @@ figure {
   position: relative;
   border-bottom: 1px solid rgba(51, 51, 51, 0.6);
 }
+@media (max-width: 875px) {
+  .nav {
+    margin-bottom: 4em;
+  }
+}
 
 .mobile {
   background: #00CBAC;
@@ -265,7 +270,7 @@ figure {
 @media (max-width: 875px) {
   .bird-title {
     font-size: 1.5rem;
-    margin: 0 auto;
+    margin: 1em auto;
     text-align: center;
   }
 }
