@@ -181,6 +181,16 @@ display: none;
 position: relative;
 top: -13.5em;
 transition: transform ease-out 350ms;
+
+
+
+}
+
+.fig-up {
+
+@include mq-large ($width: 1600px) {
+top: -14.5em;
+}
 }
 
 .figure1:hover {

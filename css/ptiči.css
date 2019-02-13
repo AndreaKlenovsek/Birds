@@ -127,6 +127,12 @@ figure {
   transition: transform ease-out 350ms;
 }
 
+@media (min-width: 1600px) {
+  .fig-up {
+    top: -14.5em;
+  }
+}
+
 .figure1:hover {
   transform: rotate(-5deg);
 }
