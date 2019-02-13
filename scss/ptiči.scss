@@ -76,18 +76,30 @@ margin: 0;
 /*Main Styles*/
 
 .main-logo {
-max-width: 100%;
-@include mq-small {
-padding-bottom: 1em;
+padding: 1em 0;
+
+
+
+@include mq-large ($width: 200px) {
+    max-width: 50%;
+    }
+
+@include mq-large ($width: 600px) {
+    max-width: 23%;
+        }
+    
+@include mq-large ($width: 1500px) {
+    max-width: 15%;
 }
 }
 
 .nav {
-height: 8.3em;
+height: 7em;
 background: $dark-grey;
 margin-bottom: 9em;
 position: relative;
 border-bottom: 1px solid rgba(#333333, 0.6);
+
 }
 
 .mobile {
@@ -324,7 +336,7 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 @include mq-small {
-height: 70vh;  
+height: 70vh;
 }
 
 & h2 {
