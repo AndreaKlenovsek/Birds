@@ -76,6 +76,7 @@ margin: 0;
 /*Main Styles*/
 
 .main-logo {
+max-width: 100%;
 @include mq-small {
 padding-bottom: 1em;
 }
@@ -299,8 +300,19 @@ width: 100%;
 
 .logo {
 position: absolute;
+max-width: 20%;
 margin-top: -1em;
-left: 5%;
+left: 2%;
+
+@include mq-large {
+margin-top: -3em;
+max-width: 15%;
+}
+
+@include mq-large ($width: 1300px) {
+margin-top: -4em;
+max-width: 10%;
+    }
 }
 
 
@@ -396,6 +408,15 @@ line-height: 1.4;
 
 .nest {
 margin-top: 1em;
+max-width: 70%;
+
+@include mq-large ($width: 500px) {
+max-width: 40%;
+}
+
+@include mq-large ($width: 1300px) {
+max-width: 40%;
+}
 }
 
 .made {

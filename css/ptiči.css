@@ -21,6 +21,9 @@ figure {
 }
 
 /*Main Styles*/
+.main-logo {
+  max-width: 100%;
+}
 @media (max-width: 875px) {
   .main-logo {
     padding-bottom: 1em;
@@ -266,8 +269,21 @@ figure {
 
 .logo {
   position: absolute;
+  max-width: 20%;
   margin-top: -1em;
-  left: 5%;
+  left: 2%;
+}
+@media (min-width: 875px) {
+  .logo {
+    margin-top: -3em;
+    max-width: 15%;
+  }
+}
+@media (min-width: 1300px) {
+  .logo {
+    margin-top: -4em;
+    max-width: 10%;
+  }
 }
 
 .nesting {
@@ -388,6 +404,17 @@ footer {
 
 .nest {
   margin-top: 1em;
+  max-width: 70%;
+}
+@media (min-width: 500px) {
+  .nest {
+    max-width: 40%;
+  }
+}
+@media (min-width: 1300px) {
+  .nest {
+    max-width: 40%;
+  }
 }
 
 .made {
