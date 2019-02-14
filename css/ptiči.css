@@ -338,7 +338,7 @@ figure {
 }
 @media (max-width: 875px) {
   .nesting {
-    height: 70vh;
+    height: 80vh;
   }
 }
 .nesting h2 {

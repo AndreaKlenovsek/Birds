@@ -118,7 +118,6 @@ width: 100%;
 height: 20%;
 bottom: 0;
 
-
 }
 }
 }
@@ -133,7 +132,6 @@ border-bottom: 1px solid rgba(#333333, 0.6);
 @include mq-small {
 margin-bottom: 4em;
 }
-
 }
 
 .mobile {
@@ -381,7 +379,7 @@ background-position: center;
 background-size: cover;
 position: relative;
 @include mq-small {
-height: 70vh;
+height: 80vh;
 }
 
 & h2 {
