@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Felipa|Indie+Flower|Lora:400,700");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700|EB+Garamond|Lobster|Pacifico|Permanent+Marker|Satisfy|Shadows+Into+Light");
 /*Base Styles*/
 * {
   box-sizing: border-box;
@@ -22,26 +23,45 @@ figure {
 
 /*Main Styles*/
 .main-logo {
-  padding: 1em 0;
+  padding: 0.7em 0;
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  color: white;
+  font-size: 2rem;
 }
-@media (min-width: 200px) {
+@media (min-width: 875px) {
   .main-logo {
-    max-width: 50%;
+    padding-top: 0.3em;
+    font-size: 2.3rem;
   }
 }
-@media (min-width: 600px) {
-  .main-logo {
-    max-width: 23%;
+.main-logo span {
+  color: #00CBAC;
+  font-family: "Satisfy", cursive;
+  position: relative;
+  top: 0.2em;
+  font-size: 2rem;
+  display: inline-block;
+  z-index: 10;
+}
+@media (min-width: 875px) {
+  .main-logo span {
+    font-size: 3.2rem;
   }
 }
-@media (min-width: 1500px) {
-  .main-logo {
-    max-width: 15%;
-  }
+.main-logo span::after {
+  background-image: url(../img/border.svg);
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
 }
 
 .nav {
-  height: 7em;
+  height: 8em;
   background: #333333;
   margin-bottom: 9em;
   position: relative;
