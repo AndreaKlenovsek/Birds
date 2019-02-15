@@ -395,6 +395,9 @@ position: absolute;
 right: 2em;
 bottom: .95em;
 height: 800px;
+@include mq-large($width: 1579px) {
+bottom: .70em;
+}
 
 @include mq-small($width: 1155px) {
 display: none;
@@ -408,6 +411,7 @@ margin: 0 auto;
 flex-wrap: wrap;
 
 
+
 & p {
 flex: 30%;
 padding: 3.5em 0;
@@ -417,6 +421,7 @@ font-size: 1rem;
 }
 }
 }
+
 
 footer {
 height: auto;
@@ -435,13 +440,14 @@ grid-template-columns: 1fr 1fr;
 }
 
 .footer-title {
-@include title-large($fs: 1.2em, $ff: $ff-lora, $bg: none, $color: black);
+@include title-large($fs: 1em, $ff: $ff-lora, $bg: none, $color: black);
 margin-top: 1.5em;
 padding: 0 1em;
 
 @include mq-large {
 margin-top: 3em;
-    }
+font-size: 1.2em;
+}
 }
 
 

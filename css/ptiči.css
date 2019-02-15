@@ -370,6 +370,11 @@ figure {
   bottom: 0.95em;
   height: 800px;
 }
+@media (min-width: 1579px) {
+  .bird-house {
+    bottom: 0.7em;
+  }
+}
 @media (max-width: 1155px) {
   .bird-house {
     display: none;
@@ -412,7 +417,7 @@ footer {
   font-family: "Lora", serif;
   letter-spacing: 5px;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
   color: black;
   display: inline-block;
   margin: 1em auto;
@@ -430,6 +435,7 @@ footer {
 @media (min-width: 875px) {
   .footer-title {
     margin-top: 3em;
+    font-size: 1.2em;
   }
 }
 
